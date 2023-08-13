@@ -7,6 +7,8 @@ import 'package:brb/widgets/app_input_field.dart';
 import 'package:brb/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
+import '../home/withdraw_amount1.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -87,7 +89,14 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 33,
               ),
-              AppButton(btnText: "Sign In", ontap: () {}),
+              AppButton(
+                  btnText: "Sign In",
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const WithdrawAmount1();
+                    }));
+                  }),
               const SizedBox(
                 height: 40,
               ),
