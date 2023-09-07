@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/appcolors.dart';
 import '../../widgets/app_text.dart';
+import 'bottomnav.dart';
 
 class SuccessfullRegister extends StatelessWidget {
   const SuccessfullRegister({super.key});
@@ -45,7 +46,12 @@ class SuccessfullRegister extends StatelessWidget {
             ),
             Image.asset("assets/success.png"),
             const Spacer(),
-            AppButton(btnText: "Continue To Home", ontap: () {}),
+            AppButton(btnText: "Continue To Home", ontap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) {
+                    return BottomNavigation();
+                  }));
+            },),
             const SizedBox(
               height: 30,
             ),

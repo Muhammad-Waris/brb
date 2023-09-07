@@ -1,12 +1,14 @@
 import 'package:brb/constants/apppadding.dart';
-import 'package:brb/views/home/withdraw_success_screen3.dart';
+import 'package:brb/depositsuccess.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/appcolors.dart';
 import '../../widgets/app_text.dart';
+import 'notification.dart';
+import 'withdraw_success_screen3.dart';
 
-class WithdrawAmount1 extends StatelessWidget {
-  const WithdrawAmount1({super.key});
+class depositamount extends StatelessWidget {
+  const depositamount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +34,19 @@ class WithdrawAmount1 extends StatelessWidget {
         backgroundColor: AppColors.primaryColor,
         centerTitle: true,
         title: const AppText(
-          text: "Withdraw Success",
+          text: "Deposit Amount",
           color: Colors.white,
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Image.asset("assets/notification.png"),
-          )
+          IconButton(
+            icon: Icon(Icons.notifications, color: Colors.white,),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => notificationscreen()),
+              );
+            },
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -69,7 +76,7 @@ class WithdrawAmount1 extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const WithdrawSuccess3();
+                        return const depositsuccess();
                       }));
                     },
                     child: SizedBox(

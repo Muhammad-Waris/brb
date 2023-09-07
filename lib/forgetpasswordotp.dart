@@ -1,14 +1,13 @@
 import 'package:brb/constants/apppadding.dart';
-import 'package:brb/views/register/register_success.dart';
 import 'package:brb/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
-
 import '../../constants/appcolors.dart';
 import '../../widgets/app_text.dart';
+import 'login.dart';
 
-class Otp extends StatelessWidget {
-  Otp({super.key});
+class forgetpasswordotp extends StatelessWidget {
+  forgetpasswordotp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -89,8 +88,8 @@ class Otp extends StatelessWidget {
                   ontap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const SuccessfullRegister();
-                    }));
+                          return const LoginScreen();
+                        }));
                   })
             ],
           ),

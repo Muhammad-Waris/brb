@@ -1,13 +1,14 @@
 import 'package:brb/constants/appcolors.dart';
 import 'package:brb/constants/apppadding.dart';
-import 'package:brb/views/register/forgot_password.dart';
-import 'package:brb/views/register/register.dart';
+import 'package:brb/register.dart';
 import 'package:brb/widgets/app_button.dart';
 import 'package:brb/widgets/app_input_field.dart';
 import 'package:brb/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
-import '../home/withdraw_amount1.dart';
+import 'bottomnav.dart';
+import 'forgot_password.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -94,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ontap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const WithdrawAmount1();
+                      return BottomNavigation();
                     }));
                   }),
               const SizedBox(

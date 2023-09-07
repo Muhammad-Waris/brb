@@ -1,12 +1,12 @@
 import 'package:brb/constants/apppadding.dart';
 import 'package:brb/widgets/app_button.dart';
 import 'package:flutter/material.dart';
-
 import '../../constants/appcolors.dart';
 import '../../widgets/app_text.dart';
+import 'bottomnav.dart';
 
-class WithdrawSuccess3 extends StatelessWidget {
-  const WithdrawSuccess3({super.key});
+class depositsuccess extends StatelessWidget {
+  const depositsuccess({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class WithdrawSuccess3 extends StatelessWidget {
         backgroundColor: AppColors.primaryColor,
         centerTitle: true,
         title: const AppText(
-          text: "Withdraw Success",
+          text: "Deposit Success",
           color: Colors.white,
         ),
         actions: [
@@ -62,7 +62,7 @@ class WithdrawSuccess3 extends StatelessWidget {
               height: 12,
             ),
             const AppText(
-              text: "Payment has been withdrawn Successful",
+              text: "Payment has been depositted Successfully",
               fontSize: 20,
               textAlign: TextAlign.center,
             ),
@@ -180,7 +180,12 @@ class WithdrawSuccess3 extends StatelessWidget {
             const SizedBox(
               height: 45,
             ),
-            AppButton(btnText: "Back to Signin", ontap: () {}),
+            AppButton(btnText: "Back to Home", ontap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) {
+                    return BottomNavigation();
+                  }));
+            },),
           ],
         ),
       ),

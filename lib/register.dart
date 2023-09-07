@@ -1,11 +1,12 @@
 import 'package:brb/constants/apppadding.dart';
-import 'package:brb/views/register/login.dart';
+import 'package:brb/otp.dart';
 import 'package:brb/widgets/app_button.dart';
 import 'package:brb/widgets/app_input_field.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/appcolors.dart';
 import '../../widgets/app_text.dart';
+import 'login.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -97,7 +98,12 @@ class RegisterScreen extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              AppButton(btnText: "Continue", ontap: () {}),
+              AppButton(btnText: "Continue", ontap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return Otp();
+                    }));
+              },),
               const SizedBox(
                 height: 40,
               ),

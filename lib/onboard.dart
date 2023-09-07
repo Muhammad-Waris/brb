@@ -1,8 +1,9 @@
 import 'package:brb/constants/appcolors.dart';
-import 'package:brb/views/register/login.dart';
 import 'package:brb/widgets/app_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+
+import 'bottomnav.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -118,7 +119,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     // Replace this with your navigation logic to the home screen or landing page
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const LoginScreen()),
+      MaterialPageRoute(builder: (context) => const BottomNavigation()),
     );
   }
 }

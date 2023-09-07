@@ -1,9 +1,7 @@
 import 'dart:async';
-
-import 'package:brb/constants/appcolors.dart';
-import 'package:brb/views/onboarding/onboard.dart';
 import 'package:flutter/material.dart';
 
+import 'bottomnav.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -16,10 +14,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 5), () {
       // Replace '/home' with the route to your next screen
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return  const OnboardingScreen();
+        return const BottomNavigation();
       }));
     });
   }
@@ -27,12 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.appBackgroundColor,
+      backgroundColor: const Color(0xff176400),
       body: Center(
         child: Image.asset(
-          'assets/logo.png', // Replace 'your_logo.png' with the actual image path
-          width: 222, // Set the desired width of the logo
-          height: 222, // Set the desired height of the logo
+          'assets/Splash_Screen.gif', // Replace 'your_gif.gif' with the actual GIF path
+          width: MediaQuery.of(context).size.width/1.5, // Set the desired width of the GIF
+          height: MediaQuery.of(context).size.height/1.5, // Set the desired height of the GIF
         ),
       ),
     );

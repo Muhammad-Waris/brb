@@ -1,11 +1,10 @@
 import 'package:brb/constants/apppadding.dart';
-import 'package:brb/views/register/otp.dart';
 import 'package:brb/widgets/app_button.dart';
 import 'package:brb/widgets/app_input_field.dart';
 import 'package:flutter/material.dart';
-
 import '../../constants/appcolors.dart';
 import '../../widgets/app_text.dart';
+import 'forgetpasswordotp.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
@@ -76,7 +75,7 @@ class ForgotPassword extends StatelessWidget {
                   ontap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return  Otp();
+                      return  forgetpasswordotp();
                     }));
                   }),
             ],
